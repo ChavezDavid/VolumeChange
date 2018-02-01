@@ -28,6 +28,7 @@ namespace Playback
         private WaveOutEvent output;
         DispatcherTimer timer;
         bool dragging = false;
+        private VolumeWaveProvider16 volumeProvider;
 
         public MainWindow()
         {
@@ -95,7 +96,6 @@ namespace Playback
                     output.DeviceNumber = cbDispositivos.SelectedIndex;
                     output.NumberOfBuffers = 2;
                     output.DesiredLatency = 150;
-                    output.Volume = (float)sldVolumen.Value;
 
                     output.Init(reader);
                     output.Play();
@@ -168,10 +168,7 @@ namespace Playback
 
         private void sldVolumen_DragCompleted(object sender, RoutedEventArgs e)
         {
-            if (output != null)
-            {
-                output.Volume = (float)sldVolumen.Value;
-            }
+            
         }
     }
 }
