@@ -16,6 +16,6 @@
         <Label x:Name="lblDuration" Content="0:00" HorizontalAlignment="Left" Margin="242,61,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="91,114,0,0" VerticalAlignment="Top" Width="74" IsEnabled="False" Click="btnPause_Click"/>
         <ComboBox x:Name="cbDispositivos" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Width="264"/>
-        <Slider x:Name="sldVolumen" Margin="279,56,0,0" Width="21" VerticalAlignment="Top" HorizontalAlignment="Left" Orientation="Vertical" Height="99" Maximum="1" Value="0.5" Thumb.DragCompleted="sldVolumen_DragCompleted"/>
+        <Slider x:Name="sldVolumen" Margin="279,56,0,0" Width="21" VerticalAlignment="Top" HorizontalAlignment="Left" Orientation="Vertical" Height="99" Maximum="1" Value="0.5" Thumb.DragCompleted="sldVolumen_DragCompleted" ValueChanged="sldVolumen_ValueChanged"/>
     </Grid>
 </Window>
